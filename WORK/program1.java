@@ -7,14 +7,14 @@ public class program1 {
                 "{\"фамилия\":\"Краснов\",\"оценка\":\"5\",\"предмет\":\"Физика\"}]";
         text = text.replaceAll("[\\[\\]{\"]", "");
 
-        String[] students = text.split("},");
+       String[] pupils = text.split("},");
 
-        for (String note : students) {
+        for (String note : pupils) {
             String[] temp = note.split(",");
             String[] name = temp[0].split(":");
             String[] ball = temp[1].split(":");
-            String[] lesson = temp[2].split(":");
-            lesson[1] = lesson[1].replace("}", "");
+            String[] item = temp[2].split(":");
+            item[1] = item[1].replace("}", "");
 
             StringBuilder sb = new StringBuilder();
             sb.append("Студент ");
@@ -22,7 +22,7 @@ public class program1 {
             sb.append(" получил ");
             sb.append(ball[1]);
             sb.append(" по предмету ");
-            sb.append(lesson[1]);
+            sb.append(item[1]);
             System.out.println(sb.toString());
 
         }
