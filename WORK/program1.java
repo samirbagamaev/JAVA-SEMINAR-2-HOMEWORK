@@ -12,7 +12,7 @@ public class program1 {
         for (String note : pupils) {
             String[] temp = note.split(",");
             String[] name = temp[0].split(":");
-            String[] ball = temp[1].split(":");
+            String[] val = temp[1].split(":");
             String[] item = temp[2].split(":");
             item[1] = item[1].replace("}", "");
 
@@ -20,7 +20,7 @@ public class program1 {
             sb.append("Студент ");
             sb.append(name[1]);
             sb.append(" получил ");
-            sb.append(ball[1]);
+            sb.append(val[1]);
             sb.append(" по предмету ");
             sb.append(item[1]);
             System.out.println(sb.toString());
